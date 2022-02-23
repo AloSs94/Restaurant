@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+@font-face {
+  font-family: 'brush';
+  src: url("../fonts/alexbrush-regular-webfont.woff") format("woff"); }
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Open Sans", sans-serif, Arial, sans-serif; }
+
+.contenedor {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden; }
+
+button {
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  margin: 0; }
+
+header {
+  width: 100%;
+  background-color: #281a0c;
+  background-image: url("../img/Fondo.jpg");
+  background-size: cover;
+  background-attachment: fixed; }
+  header .contenedor {
+    position: relative;
+    height: 700px; }
+  header #ContenedorMenu {
+    width: 100%;
+    height: 100%; }
+  header .menu {
+    position: fixed;
+    float: right;
+    width: 100%;
+    z-index: 99999;
+    background: transparent;
+    transition: background-color .3s ease; }
+    header .menu.color {
+      background: #f9f6ff; }
+    header .menu #Responsive {
+      order: 2;
+      display: none;
+      background: transparent;
+      float: right;
+      margin: 15px 30px; }
+      header .menu #Responsive .bar {
+        display: block;
+        height: 3px;
+        background: #1c1c1c;
+        width: 50px;
+        margin: 10px auto;
+        transition: 0.5s ease; }
+    header .menu .active .bar:first-child {
+      transform: translateY(15px); }
+    header .menu .active .bar:last-child {
+      transform: translateY(-15px);
+      animation: CambioColor 0.5s forwards ease; }
+    header .menu .nav-menu {
+      display: flex;
+      justify-content: flex-end;
+      list-style-type: none;
+      width: 100%;
+      padding: 30px;
+      transition: color .3s ease-in; }
+    header .menu .logo {
+      order: 1;
+      display: none;
+      text-align: center; }
+    header .menu a {
+      display: inline-block;
+      color: #ffff;
+      font-size: 20px;
+      font-weight: 300;
+      margin: 0 30px;
+      text-decoration: none;
+      position: relative; }
+    header .menu a:hover {
+      text-decoration: underline; }
+    header .menu .color a {
+      color: #1c1c1c; }
+  header .Introduccion {
+    width: 100%;
+    color: #ffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -146px;
+    margin-left: -148px; }
+
+.mainContent {
+  background-image: url("../img/textura2.png");
+  background-repeat: repeat; }
+  .mainContent .AcercaDe {
+    height: 600px; }
+    .mainContent .AcercaDe .contenedor {
+      overflow: visible;
+      position: relative; }
+    .mainContent .AcercaDe .foto {
+      width: 80%;
+      position: absolute;
+      left: 0;
+      top: -50px;
+      z-index: 0;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.35); }
+      .mainContent .AcercaDe .foto img {
+        vertical-align: top;
+        width: 100%; }
+    .mainContent .AcercaDe article {
+      background: #f9f6ff;
+      padding: 40px;
+      width: 50%;
+      position: relative;
+      top: 100px;
+      z-index: 1;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
+      float: right; }
+      .mainContent .AcercaDe article h3 {
+        font-size: 50px;
+        font-weight: 300;
+        font-family: "brush",cursive;
+        margin-bottom: 40px; }
+      .mainContent .AcercaDe article p {
+        line-height: 28px;
+        margin-bottom: 15px; }
+
+.mainContent .Menu {
+  margin-bottom: 40px;
+  padding-top: 100px; }
+  .mainContent .Menu .Borde-Menu1 {
+    border: thin solid #F9F6FF;
+    background: transparent;
+    padding: 10px;
+    overflow: hidden; }
+  .mainContent .Menu .Borde-Menu2 {
+    border: thin solid #F9F6FF;
+    background: transparent;
+    padding: 10px;
+    overflow: hidden; }
+  .mainContent .Menu .platillos {
+    font-family: "brush", cursive;
+    font-size: 70px;
+    font-weight: 300;
+    text-align: center;
+    color: #F9F6FF;
+    margin-bottom: 40px; }
+  .mainContent .Menu article {
+    width: 50%;
+    float: left;
+    padding: 20px; }
+  .mainContent .Menu .categoria {
+    color: #F9F6FF;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center; }
+  .mainContent .Menu .platillo {
+    color: #F9F6FF;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 4px dotted #C3C3C3;
+    overflow: hidden; }
+  .mainContent .Menu .nombre {
+    font-size: 20px;
+    margin-bottom: 15px;
+    float: left; }
+  .mainContent .Menu .precio {
+    font-size: 20px;
+    margin-bottom: 15px;
+    float: right; }
+  .mainContent .Menu .descripcion {
+    font-size: 16px;
+    color: #CBCBCB;
+    clear: both; }
+
+.mainContent .Galeria {
+  overflow: hidden;
+  padding-top: 70px; }
+  .mainContent .Galeria .foto {
+    width: 25%;
+    float: left; }
+    .mainContent .Galeria .foto img {
+      width: 100%;
+      height: auto;
+      vertical-align: top;
+      opacity: 0.7; }
+      .mainContent .Galeria .foto img:hover {
+        opacity: 1;
+        -webkit-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease; }
+
+.mainContent .Ubicacion {
+  color: #f9f6ff;
+  padding: 60px 0;
+  overflow: hidden; }
+  .mainContent .Ubicacion .titulo {
+    text-align: center;
+    font-size: 55px;
+    font-weight: 300;
+    font-family: "brush", cursive;
+    margin-bottom: 40px; }
+  .mainContent .Ubicacion .Direccion {
+    float: left;
+    width: 50%;
+    text-align: left; }
+    .mainContent .Ubicacion .Direccion .calle {
+      margin-bottom: 15px; }
+  .mainContent .Ubicacion .Horarios {
+    float: right;
+    width: 50%;
+    text-align: right;
+    overflow: hidden; }
+    .mainContent .Ubicacion .Horarios h4 {
+      text-align: center;
+      margin-bottom: 20px; }
+    .mainContent .Ubicacion .Horarios .entreSemana,
+    .mainContent .Ubicacion .Horarios .FinDeSemana {
+      width: 50%;
+      float: left;
+      text-align: center; }
+      .mainContent .Ubicacion .Horarios .entreSemana span,
+      .mainContent .Ubicacion .Horarios .FinDeSemana span {
+        font-weight: 700; }
+
+.mainContent .mapa {
+  width: 100%;
+  overflow: hidden; }
+  .mainContent .mapa iframe {
+    width: 100%;
+    max-height: 700px; }
+
+footer {
+  background: #000000; }
+  footer .copyright {
+    color: #F9F6FF;
+    text-align: center;
+    padding: 15px 0; }
+
+/*Media queries*/
+@media screen and (max-width: 800px) {
+  header .contenedor {
+    position: relative; }
+  header .menu {
+    background-color: #F9F6FF;
+    height: 80px;
+    width: 100%; }
+    header .menu .nav-menu {
+      background: #1c1c1c;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      padding: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 1.5s ease; }
+      header .menu .nav-menu li {
+        z-index: 1;
+        margin: 0;
+        width: 100%;
+        padding: 10px 0; }
+        header .menu .nav-menu li a {
+          display: block;
+          margin: 0; }
+    header .menu #Responsive {
+      display: block; }
+      header .menu #Responsive.active {
+        animation: Fondo 0.5s forwards ease; }
+    header .menu .logo {
+      display: block;
+      float: left;
+      padding: 15px 0;
+      margin-top: 10px;
+      color: #1c1c1c;
+      font-family: 'brush';
+      font-size: 30px; }
+  header .Introduccion img {
+    width: auto;
+    height: auto; }
+  .mainContent .AcercaDe {
+    height: 600px; }
+    .mainContent .AcercaDe .foto {
+      width: 100%;
+      position: relative; }
+    .mainContent .AcercaDe article {
+      position: relative;
+      width: 100%;
+      top: -50px;
+      transform: translate(0, 0); }
+  .mainContent .Menu {
+    padding-top: 0; }
+    .mainContent .Menu article {
+      width: 100%; }
+  .mainContent .Galeria .foto {
+    width: 50%; }
+  .mainContent .mapa {
+    width: 80%;
+    margin: auto; } }
+
+@media screen and (max-width: 500px) {
+  header .Introduccion {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -100px; }
+    header .Introduccion img {
+      width: 200px;
+      height: 200px; }
+  header #ContenedorMenu {
+    position: relative; }
+  .mainContent .AcercaDe article h3 {
+    font-size: 34px;
+    margin-bottom: 10px; }
+  .mainContent .Menu {
+    padding-top: 300px; }
+    .mainContent .Menu article {
+      width: 100%; }
+  .mainContent .Galeria {
+    margin-top: 50px; }
+    .mainContent .Galeria .foto {
+      width: 100%; }
+  .mainContent .mapa {
+    width: 80%;
+    margin: auto; }
+  .mainContent .Menu article .nombre,
+  .mainContent .Menu article .precio {
+    font-size: 16px;
+    line-height: 16px; }
+  .mainContent .Ubicacion .Direccion {
+    margin-bottom: 15px; }
+  .mainContent .Ubicacion .Direccion,
+  .mainContent .Ubicacion .Horarios {
+    width: 100%;
+    text-align: center; } }
